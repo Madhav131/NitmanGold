@@ -1,0 +1,27 @@
+rootProject.name = 'NitmanGold'
+include ':react-native-svg'
+project(':react-native-svg').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-svg/android')
+include ':react-native-prevent-screenshot'
+project(':react-native-prevent-screenshot').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-prevent-screenshot/android')
+include ':react-native-screenshot-prevent'
+project(':react-native-screenshot-prevent').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-screenshot-prevent/android')
+include ':react-native-screenshot-prevent'
+project(':react-native-screenshot-prevent').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-screenshot-prevent/android')
+include ':react-native-screenshot-prevent'
+project(':react-native-screenshot-prevent').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-screenshot-prevent/android')
+include ':react-native-vector-icons'
+project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
+include ':react-native-vector-icons'
+project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
+include ':react-native-linear-gradient'
+project(':react-native-linear-gradient').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-linear-gradient/android')
+include ':react-native-vector-icons'
+project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+includeBuild('../node_modules/react-native-gradle-plugin')
+
+if (settings.hasProperty("newArchEnabled") && settings.newArchEnabled == "true") {
+    include(":ReactAndroid")
+    project(":ReactAndroid").projectDir = file('../node_modules/react-native/ReactAndroid')
+}
